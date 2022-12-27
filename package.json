@@ -1,0 +1,33 @@
+{
+  "name": "calorie-counter-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html --no-source-maps --open",
+    "build": "parcel build index.html --no-source-maps --no-cache --public-url .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "parcelCleanPaths": [ 
+    "dist",
+    ".cache"
+  ],
+  "targets": {
+    "main": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kvezac/calorie-counter-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kvezac/calorie-counter-project/issues"
+  },
+  "homepage": "https://github.com/Kvezac/calorie-counter-project#readme",
+  "devDependencies": {
+    "parcel": "^2.8.2",
+    "parcel-plugin-clean-easy": "^1.0.2"
+  }
+}
