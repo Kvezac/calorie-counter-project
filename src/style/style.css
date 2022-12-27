@@ -12,8 +12,8 @@
 
   font-display: swap;
   src:
-    url("../fonts/pt-sans-caption-bold.woff2") format("woff2"),
-    url("../fonts/pt-sans-caption-bold.woff") format("woff");
+    url("./fonts/pt-sans-caption-bold.woff2") format("woff2"),
+    url("./fonts/pt-sans-caption-bold.woff") format("woff");
 }
 
 @font-face {
@@ -23,8 +23,8 @@
 
   font-display: swap;
   src:
-    url("../fonts/pt-sans-caption-regular.woff2") format("woff2"),
-    url("../fonts/pt-sans-caption-regular.woff") format("woff");
+    url("./fonts/pt-sans-caption-regular.woff2") format("woff2"),
+    url("./fonts/pt-sans-caption-regular.woff") format("woff");
 }
 
 *,
@@ -86,7 +86,7 @@ body {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
 
-  background-image: url("../img/main-background.jpg");
+  background-image: url("./img/main-background.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -505,7 +505,7 @@ input[type="number"] {
   margin-top: 1px;
   padding-right: 8px;
 
-  background-image: url("../img/icon-radio-empty.svg");
+  background-image: url("./img/icon-radio-empty.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 24px 24px;
@@ -516,7 +516,7 @@ input[type="number"] {
 }
 
 .radio__wrapper input[type="radio"]:checked + label::before {
-  background-image: url("../img/icon-radio-checked.svg");
+  background-image: url("./img/icon-radio-checked.svg");
 }
 
 .radio__wrapper label:hover,
