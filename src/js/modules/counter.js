@@ -17,7 +17,7 @@ const CaloriesFormulaFactor = {
 
 const CaloriesFormulaConstant = {
   MALE: -5,
-  FE,
+  FEMALE: 161,
 };
 
 const CaloriesMinMaxRatio = {
