@@ -81,16 +81,15 @@ export default class Counter {
     // console.log("Отпарвка");
     const target = event.target;
 
-    // const isValid = target.checkValidity();
-
     if (target.closest('[name="parameters"]')) {
       target.value = validateInput(target);
       this[target.name] = target.value;
-      this.resetButton.disabled = !target.value;
+      this.resetButton.disabled = target.value ? false : true;
     } else if (target.type == "radio") {
       this[target.name] = target.value.toUpperCase();
     }
     this.submitButton.disabled = !this.form.checkValidity();
+
     // this.resetButton.disabled = !this.elements;
   }
   /**
@@ -126,12 +125,12 @@ export default class Counter {
     console.log(`norm: ${calories.norm}`);
     console.log(`min: ${calories.minimal}`);
     console.log(`max: ${calories.maximal}`);
-    console.log('***********************');
+    console.log("***********************");
     this.result.show(calories);
   }
-/**
- * This is init() function start event
- */
+  /**
+   * This is init() function start event
+   */
   init() {
     // инициализация обработчиков событий
     // _onFormInput, _onFormReset, _onFormSubmit
@@ -139,41 +138,41 @@ export default class Counter {
     this.form.addEventListener("submit", this._onFormSubmit);
     this.form.addEventListener("reset", this._onFormReset);
   }
-/**
- * @param {Number} activity
- * @returns {Number} 
- */
+  /**
+   * @param {Number} activity
+   * @returns {Number}
+   */
   getActivityRatio() {
     const activity = this.activity;
     return PhysicalActivityRatio[activity];
   }
-/**
- * This is deinit() function reset parameters
- */
+  /**
+   * This is deinit() function reset parameters
+   */
   deinit() {
     // удаление обработчиков событий
     // _onFormInput, _onFormReset, _onFormSubmit
     this.elements.outerHTML = this.elements.outerHTML;
     this.gender = "MALE";
     this.activity = "MIN";
-    this.age = '0';
-    this.height = '0';
-    this.weight = '0';
+    this.age = "0";
+    this.height = "0";
+    this.weight = "0";
     console.log("deinit");
     console.log(`gender: ${this.gender}`);
     console.log(`age: ${this.age}`);
     console.log(`weight: ${this.weight}`);
     console.log(`height: ${this.height}`);
     console.log(`activity: ${this.activity}`);
-    console.log('*************************');
+    console.log("*************************");
   }
-/**
- * This is function calculate user input.
- * @returns {Number}
- * @param {Number} age
- * @param {Number} weight
- * @param {Number} height
- */
+  /**
+   * This is function calculate user input.
+   * @returns {Number}
+   * @param {Number} age
+   * @param {Number} weight
+   * @param {Number} height
+   */
   getCaloriesNorm() {
     // перечисление констант age, weight, height, gender, activity
     // применение формулы расчета
@@ -187,7 +186,7 @@ export default class Counter {
     console.log(`weight: ${weight}`);
     console.log(`height: ${height}`);
     console.log(`activity: ${activity}`);
-    console.log('**********************');
+    console.log("**********************");
     const caloriesNorm =
       CaloriesFormulaFactor.WEIGHT * weight +
       CaloriesFormulaFactor.HEIGHT * height -
@@ -197,19 +196,19 @@ export default class Counter {
 
     return Math.round(caloriesNorm * activityRatio);
   }
-/**
- * 
- * @param {Number} caloriesNorm 
- * @returns {Number}
- */
+  /**
+   *
+   * @param {Number} caloriesNorm
+   * @returns {Number}
+   */
   getCaloriesMin(caloriesNorm) {
     return Math.round(caloriesNorm * CaloriesMinMaxRatio.MIN);
   }
-/**
- * 
- * @param {Number} caloriesNorm 
- * @returns {Number}
- */
+  /**
+   *
+   * @param {Number} caloriesNorm
+   * @returns {Number}
+   */
   getCaloriesMax(caloriesNorm) {
     return Math.round(caloriesNorm * CaloriesMinMaxRatio.MAX);
   }
