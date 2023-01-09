@@ -84,7 +84,7 @@ export default class Counter {
     if (target.closest('[name="parameters"]')) {
       target.value = validateInput(target);
       this[target.name] = target.value;
-      this.resetButton.disabled = target.value ? false : true;
+      this.resetButton.disabled = !target.value ? true : false;
     } else if (target.type == "radio") {
       this[target.name] = target.value.toUpperCase();
     }
