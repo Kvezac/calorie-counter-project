@@ -36,9 +36,9 @@ export default class Counter {
    * @param {object} elements
    * @param {string} gender
    * @param {string} activity
-   * @param {Number} age
-   * @param {Number} height
-   * @param {Number} weight
+   * @param {string} age
+   * @param {string} height
+   * @param {string} weight
    * @param {object} submitButton
    * @param {object} resetButton
    * @param {class} result
@@ -156,9 +156,9 @@ export default class Counter {
     this.elements.outerHTML = this.elements.outerHTML;
     this.gender = "MALE";
     this.activity = "MIN";
-    this.age = 0;
-    this.height = 0;
-    this.weight = 0;
+    this.age = '0';
+    this.height = '0';
+    this.weight = '0';
     console.log("deinit");
     console.log(`gender: ${this.gender}`);
     console.log(`age: ${this.age}`);
@@ -170,14 +170,17 @@ export default class Counter {
 /**
  * This is function calculate user input.
  * @returns {Number}
+ * @param {Number} age
+ * @param {Number} weight
+ * @param {Number} height
  */
   getCaloriesNorm() {
     // перечисление констант age, weight, height, gender, activity
     // применение формулы расчета
     const gender = this.gender;
-    const age = Number(this.age);
-    const weight = Number(this.weight);
-    const height = Number(this.height);
+    const age = Number.parseInt(this.age, 10);
+    const weight = Number.parseInt(this.weight, 10);
+    const height = Number.parseInt(this.height, 10);
     const activity = this.activity;
     console.log(`gender: ${gender}`);
     console.log(`age: ${age}`);
