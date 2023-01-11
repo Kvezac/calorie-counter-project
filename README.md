@@ -5,7 +5,9 @@ This is a project after completing the Java script course. Below is a descriptio
 - npm run start
 - Open browser fill in form fields
 <h2>Lighthouse</h2>
-<img src="./src/style/img/lighthouse.png" align="center" alt="Lighthouse">
+<p align="center">
+<img src="./src/style/img/lighthouse.png" alt="Lighthouse">
+</p>
 <h2>Техническое задание проекта</h2>
 <p>Пример ниже описывает один из способов выполнения проекта.</p>
 
