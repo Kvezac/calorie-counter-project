@@ -6,7 +6,7 @@ This is a project after completing the Java script course. Below is a descriptio
 - Open browser fill in form fields
 <h2>Lighthouse</h2>
 <p align="center">
-  <img src="calorie-counter-project\src\style\img\lighthouse.png" title="lighthouse">
+  ![Image alt](https://github.com/{Kvezac}/{calorie-counter-project}/raw/{main}/{calorie-counter-project\src\style\img\lighthouse.png}/lighthouse.png)
 </p>
 
 <h2>Техническое задание проекта</h2>
