@@ -5,7 +5,7 @@ This is a project after completing the Java script course. Below is a descriptio
 - npm run start
 - Open browser fill in form fields
 <h2>Lighthouse</h2>
-![Screenshot](calorie-counter-project\src\style\img\lighthouse.png)
+![Screenshot](lighthouse.png)
 
 <h2>Техническое задание проекта</h2>
 <p>Пример ниже описывает один из способов выполнения проекта.</p>
