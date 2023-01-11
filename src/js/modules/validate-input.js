@@ -1,4 +1,4 @@
-const LEAD_ZERO = /^0+/;
+const LEAD_ZERO = /^0+/; 
 const NOT_NUMBERS = /[^\d]/g;
 /**
  *
